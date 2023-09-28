@@ -4,10 +4,6 @@ import { useSelector } from "react-redux";
 import { Helmet } from "react-helmet";
 
 
-
-    // import BasketModal from "../../modals/basketModal/BasketModal";
-    // import OrderSuccessModal from "../../modals/orderSuccessModal/OrderSuccessModal";
-
 import BasketCard from "../../basketCard/BasketCard";
 import basketIcon from '../../../resources/icons/basketCard/basketicon.svg'
 
@@ -125,8 +121,7 @@ const BasketPage = () => {
                                 </div>
                         </div>
                 </div>
-                {/* <BasketModal />
-                <OrderSuccessModal /> */}
+                
             </div>
         </>
     )

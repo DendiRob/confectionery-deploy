@@ -7,7 +7,6 @@ import './style/style.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  //временно отключен strict mode. В продакшн включить
     <Provider store={store}>
         <App />
     </Provider>

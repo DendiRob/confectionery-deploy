@@ -1,0 +1,26 @@
+version: '3'
+services:
+  frontend:
+    build: 
+        context: ./frontend
+        dockerfile: Dockerfile
+        args:
+          BACK_API_URL: /api
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+  backend:
+    build: ./backend
+    ports:
+      - "3004:3004" 
+    environment:
+      MONGODB_URI: mongodb://mongo:27017/confectioneryDB 
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017" 
+    volumes:
+      - mongo-db:/data/db
+volumes:
+  mongo-db:

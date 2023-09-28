@@ -4,7 +4,7 @@ WORKDIR /confectionery-frontend
 
 COPY package*.json ./
 
-ARG REACT_APP_API_URL=development
+ARG BACK_API_URL=development
 
 RUN npm install
 
