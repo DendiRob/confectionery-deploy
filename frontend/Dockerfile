@@ -1,6 +1,6 @@
 FROM node:18 as build
 
-WORKDIR /confectionery-frontend
+WORKDIR /frontend
 
 COPY package*.json ./
 
@@ -16,7 +16,7 @@ FROM nginx:alpine
 #static files
 COPY pictures /usr/share/nginx/html/pictures
 COPY default.conf /etc/nginx/conf.d/default.conf
-COPY --from=build /confectionery-frontend/build /usr/share/nginx/html
+COPY --from=build /frontend/build /usr/share/nginx/html
 
 EXPOSE 80
 
