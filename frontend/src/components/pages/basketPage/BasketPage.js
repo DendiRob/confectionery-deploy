@@ -21,7 +21,7 @@ const BasketPage = () => {
         const offerScroll = () =>{
             const offerBlock =  document.querySelector('.basketPage__mainContent_makeOrder');
             const offerBlockPosition = offerBlock.getBoundingClientRect();
-            if(offerBlockPosition.top <= 230 && window.outerWidth <= 869){
+            if(offerBlockPosition.top <= 430 && window.outerWidth <= 869){
                 setOfferBtn(true)
             }else{
                 setOfferBtn(false)
