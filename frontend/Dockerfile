@@ -13,6 +13,7 @@ COPY . .
 RUN npm run build
 
 FROM nginx:alpine
+
 #static files
 COPY pictures /usr/share/nginx/html/pictures
 COPY default.conf /etc/nginx/conf.d/default.conf
