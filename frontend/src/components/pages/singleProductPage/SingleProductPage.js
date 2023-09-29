@@ -19,7 +19,6 @@ import priceWarning from '../../../resources/icons/singleProduct/priceWarning_wh
 
 const SingleProductPage = () => {
 
-    const backendApi = process.env.BACK_API_URL;
 
 
     const dispatch = useDispatch();
@@ -72,7 +71,7 @@ const SingleProductPage = () => {
                     return (
                         <div key={_id} className="container">
                             <div className="single-product">
-                                <img src={`${backendApi}${photoPath}`} alt={title} className="single-product__image" />
+                                <img src={`${photoPath}`} alt={title} className="single-product__image" />
                                 <div className="single-info">
 
                                     <div>
