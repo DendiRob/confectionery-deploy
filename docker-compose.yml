@@ -22,5 +22,7 @@ services:
       - "27017:27017" 
     volumes:
       - mongo-db:/data/db
+      - ./backend/confectioneryDB.vacancies.json:/data/db/confectioneryDB.vacancies.json
+      - ./backend/confectioneryDB.products.json:/data/db/confectioneryDB.products.json
 volumes:
   mongo-db:
