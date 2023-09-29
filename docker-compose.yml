@@ -5,7 +5,7 @@ services:
         context: ./frontend
         dockerfile: Dockerfile
         args:
-          BACK_API_URL: /api
+          REACT_APP_API_URL: /api
     ports:
       - "80:80"
     depends_on:

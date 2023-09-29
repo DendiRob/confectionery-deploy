@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-const backendApi = process.env.BACK_API_URL;
+const backendApi = process.env.REACT_APP_API_URL;
 
 const productsApiSlice = createApi({
     reducerPath: 'productsApi',

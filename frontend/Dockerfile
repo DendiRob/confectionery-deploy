@@ -4,7 +4,7 @@ WORKDIR /frontend
 
 COPY package*.json ./
 
-ARG BACK_API_URL=development
+ARG REACT_APP_API_URL=development
 
 RUN npm install
 

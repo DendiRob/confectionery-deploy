@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const backendApi = process.env.BACK_API_URL;
+const backendApi = process.env.REACT_APP_API_URL;
 
 
 const items =
