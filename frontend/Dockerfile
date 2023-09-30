@@ -15,6 +15,8 @@ RUN npm run build
 FROM nginx:alpine
 
 #static files
+COPY kurushin-confectionery.key /etc/ssl/kurushin-confectionery.key
+COPY kurushin-confectionery.crt /etc/ssl/kurushin-confectionery.crt
 COPY pictures /usr/share/nginx/html/pictures
 COPY default.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /frontend/build /usr/share/nginx/html
