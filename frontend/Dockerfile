@@ -6,7 +6,7 @@ COPY package*.json ./
 
 ARG REACT_APP_API_URL=development
 
-RUN npm install
+RUN npm ci
 
 COPY . .
 

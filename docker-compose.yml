@@ -1,4 +1,5 @@
 version: '3'
+
 services:
   frontend:
     build: 
@@ -12,15 +13,33 @@ services:
     depends_on:
       - backend
     restart: always
+    networks:
+      - frontend
   backend:
     build: ./backend
     environment:
       MONGODB_URI: mongodb://mongo:27017/confectioneryDB 
     restart: always
+    networks:
+      - frontend
+      - backend
   mongo:
     image: mongo:latest
+    volumes:
+      - mongo-db:/data/db
+      - ./backend/confectioneryDB.vacancies.json:/data/db/confectioneryDB.vacancies.json
+      - ./backend/confectioneryDB.products.json:/data/db/confectioneryDB.products.json
+
     ports:
       - "27017:27017"
     restart: always
+    networks:
+      - backend
+
+
+networks:
+  frontend:
+  backend:
+
 volumes:
   mongo-db:
