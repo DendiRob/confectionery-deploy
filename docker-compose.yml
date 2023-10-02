@@ -14,8 +14,6 @@ services:
     restart: always
   backend:
     build: ./backend
-    ports:
-      - "3004:3004" 
     environment:
       MONGODB_URI: mongodb://mongo:27017/confectioneryDB 
     restart: always
