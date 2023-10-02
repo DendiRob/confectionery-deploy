@@ -5,7 +5,7 @@ COPY package*.json ./
 
 ENV MONGODB_URI=somedefault
 
-RUN npm install
+RUN npm ci
 
 COPY . .
 
