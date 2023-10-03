@@ -16,7 +16,6 @@ const app = express();
 
 
 app.use(express.static('backend'));
-app.use('/pictures',express.static('pictures'))
 
 app.use(cors());
 app.use(express.json());
