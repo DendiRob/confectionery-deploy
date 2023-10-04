@@ -4,6 +4,6 @@
 <br>
 Для более детального изучения проекта есть отдельные репозиторий: 
 - [frontend](https://github.com/DendiRob/confectionery-frontend)
-- [backend]([rg.ru](https://github.com/DendiRob/confectionery-backend)https://github.com/DendiRob/confectionery-backend)
+- [backend](https://github.com/DendiRob/confectionery-backend)https://github.com/DendiRob/confectionery-backend)
 
 ***
